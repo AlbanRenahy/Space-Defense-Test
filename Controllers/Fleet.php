@@ -5,27 +5,15 @@ namespace Controllers;
 class Fleet
 {
     /**
-     * Initating variables to have them in all the class with constructor if needed
-     *
-     */
-    protected $support_craft = (1 .' support craft');
-    protected $offensive_craft = (1 .' offensive craft');
-
-
-    public function __construct( $support_craft, $offensive_craft)
-    {
-        $this->support_craft = $support_craft;
-        $this->$offensive_craft = $offensive_craft;
-
-    }
-
-    /**
      * Function to get the ships in pairs
+     * TODO: find a solution to concatenate 2 strings representing the two types of boats, and multiply this pair by 25, can't multiply pairs of strings now.
      *
      */
     public function ships(){
-        $pairedShip = $this->support_craft + $this->offensive_craft;
+        $support_craft = 1 . 'support craft ';
+        $offensive_craft = 1 . 'offensive craft ';
+        $pairedShip = $support_craft + $offensive_craft;
         $fleet = $pairedShip * 25;
-        return $fleet;
+        var_dump($fleet);
     }
 }
